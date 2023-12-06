@@ -2,12 +2,12 @@ close all
 clear all
 clc
 
-pavadinimas = 'train_data7.png';
-pozymiai_tinklo_mokymui = pozymiai_raidems_atpazinti(pavadinimas, 10);
+pavadinimas = '1.jpg';
+pozymiai_tinklo_mokymui = pozymiai_raidems_atpazinti(pavadinimas, 8);
 
 P = cell2mat(pozymiai_tinklo_mokymui);
 
-T = [eye(3), eye(3), eye(3), eye(3), eye(3), eye(3), eye(3), eye(3), eye(3), eye(3)];
+T = [eye(4), eye(4), eye(3), eye(3), eye(3), eye(3), eye(3), eye(3)];
 % newrb(input, output, error goal, spread, neurons)
 tinklas = newrb(P,T,0,1,3);
 %  Radial basis networks
